@@ -1,7 +1,14 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const path = require("path");
 
 const config = {
+  optimization: {
+    minimize: true,
+    minimizer: [new CssMinimizerPlugin()],
+  },
   entry: {
     content: "./src/content_script/content.js",
     background: "./src/Background/background.js",
@@ -9,7 +16,7 @@ const config = {
   },
   output: {
     filename: "[name].js",
-    path: __dirname + "/dist",
+    path: path.resolve(__dirname, "dist"),
     clean: true,
   },
   plugins: [
@@ -18,7 +25,13 @@ const config = {
       filename: "index.html",
     }),
     new CopyPlugin({
-      patterns: [{ from: "manifest.json", to: "manifest.json" }],
+      patterns: [
+        { from: "public/manifest.json", to: "manifest.json" },
+        { from: "public/icons", to: "icons" },
+      ],
+    }),
+    new MiniCssExtractPlugin({
+      filename: "[name].css",
     }),
   ],
   module: {
@@ -30,13 +43,25 @@ const config = {
           loader: "babel-loader",
           options: {
             presets: [
-              "@babel/preset-env",
+              [
+                "@babel/preset-env",
+                {
+                  targets: "> 0.25%, not dead",
+                },
+              ],
               ["@babel/preset-react", { runtime: "automatic" }],
             ],
           },
         },
       },
+      {
+        test: /.s?css$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
+      },
     ],
+  },
+  resolve: {
+    extensions: [".js", ".jsx"],
   },
 };
 
