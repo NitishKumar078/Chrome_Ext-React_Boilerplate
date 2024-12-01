@@ -5,7 +5,7 @@ const App = () => {
     <div>
       <h1>
         Hello world... <br />
-        This is form react Component
+        This is form react
       </h1>
     </div>
   );
