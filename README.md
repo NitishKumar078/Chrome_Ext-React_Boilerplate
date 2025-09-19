@@ -48,7 +48,7 @@ yarn create chrome-ext <project-name>
 
 ```bash
 # Create a new Chrome extension
-npx create-react-chrome-ext my-awesome-extension
+npx create-chrome-ext my-awesome-extension
 
 # Navigate to the project
 cd my-awesome-extension
