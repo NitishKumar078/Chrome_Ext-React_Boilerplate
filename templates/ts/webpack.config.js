@@ -5,10 +5,6 @@ const CopyPlugin = require("copy-webpack-plugin");
 const path = require("path");
 
 const config = {
-  optimization: {
-    minimize: true,
-    minimizer: [new CssMinimizerPlugin()],
-  },
   entry: {
     content: "./src/content_script/content.ts",
     background: "./src/Background/background.ts",
@@ -37,18 +33,13 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.ts|tsx$/,
+        test: /\.(t|j)sx?$/i,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
           options: {
             presets: [
-              [
-                "@babel/preset-env",
-                {
-                  targets: "> 0.25%, not dead",
-                },
-              ],
+              ["@babel/preset-env", { targets: "> 0.25%, not dead" }],
               ["@babel/preset-react", { runtime: "automatic" }],
               ["@babel/preset-typescript"],
             ],
@@ -56,13 +47,13 @@ const config = {
         },
       },
       {
-        test: /.s?css$/,
+        test: /\.s?css$/i,
         use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
     ],
   },
   resolve: {
-    extensions: [".ts", ".tsx"],
+    extensions: [".ts", ".tsx", ".js", ".jsx"],
   },
 };
 
