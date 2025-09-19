@@ -1,14 +1,10 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CopyPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 const path = require("path");
 
 const config = {
-  optimization: {
-    minimize: true,
-    minimizer: [new CssMinimizerPlugin()],
-  },
   entry: {
     content: "./src/content_script/content.js",
     background: "./src/Background/background.js",
@@ -37,31 +33,27 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.js|jsx$/,
+        test: /\.(t|j)sx?$/i,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
           options: {
             presets: [
-              [
-                "@babel/preset-env",
-                {
-                  targets: "> 0.25%, not dead",
-                },
-              ],
+              ["@babel/preset-env", { targets: "> 0.25%, not dead" }],
               ["@babel/preset-react", { runtime: "automatic" }],
+              ["@babel/preset-typescript"],
             ],
           },
         },
       },
       {
-        test: /.s?css$/,
+        test: /\.s?css$/i,
         use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
     ],
   },
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: [".ts", ".tsx", ".js", ".jsx"],
   },
 };
 
