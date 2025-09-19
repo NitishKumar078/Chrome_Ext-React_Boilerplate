@@ -1,8 +1,8 @@
-# create-chrome-ext
+# create-react-chrome-ext
 
-[![npm version](https://badge.fury.io/js/create-chrome-ext.svg)](https://www.npmjs.com/package/create-chrome-ext)
+[![npm version](https://badge.fury.io/js/create-react-chrome-ext.svg)](https://www.npmjs.com/package/create-react-chrome-ext)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Downloads](https://img.shields.io/npm/dm/create-chrome-ext.svg)](https://www.npmjs.com/package/create-chrome-ext)
+[![Downloads](https://img.shields.io/npm/dm/create-react-chrome-ext.svg)](https://www.npmjs.com/package/create-react-chrome-ext)
 
 > The fastest way to create a Chrome Extension project with React, TypeScript/JavaScript, and Vite
 
@@ -21,7 +21,7 @@ A CLI tool that scaffolds a modern Chrome Extension project using React and Vite
 ## 🚀 Quick Start
 
 ```bash
-npx create-chrome-ext my-extension
+npx create-react-chrome-ext my-extension
 cd my-extension
 npm run dev
 ```
@@ -30,13 +30,13 @@ npm run dev
 
 ### Using npx (recommended)
 ```bash
-npx create-chrome-ext <project-name>
+npx create-react-chrome-ext <project-name>
 ```
 
 ### Using npm
 ```bash
-npm install -g create-chrome-ext
-create-chrome-ext <project-name>
+npm install -g create-react-chrome-ext
+create-react-chrome-ext <project-name>
 ```
 
 ### Using yarn
@@ -48,7 +48,7 @@ yarn create chrome-ext <project-name>
 
 ```bash
 # Create a new Chrome extension
-npx create-chrome-ext my-awesome-extension
+npx create-react-chrome-ext my-awesome-extension
 
 # Navigate to the project
 cd my-awesome-extension
@@ -164,8 +164,8 @@ We welcome contributions! Please see our contributing guidelines:
 
 ### Development Setup
 ```bash
-git clone https://github.com/yourusername/create-chrome-ext.git
-cd create-chrome-ext
+git clone https://github.com/yourusername/create-react-chrome-ext.git
+cd create-react-chrome-ext
 npm install
 npm link
 ```
@@ -173,7 +173,7 @@ npm link
 ### Testing Changes
 ```bash
 # Test the CLI locally
-create-chrome-ext test-extension
+create-react-chrome-ext test-extension
 ```
 
 ### Pull Request Process
@@ -186,7 +186,7 @@ create-chrome-ext test-extension
 
 ### Reporting Issues
 
-Please use the [GitHub issue tracker](https://github.com/yourusername/create-chrome-ext/issues) to report bugs or request features.
+Please use the [GitHub issue tracker](https://github.com/yourusername/create-react-chrome-ext/issues) to report bugs or request features.
 
 ## 📝 License
 
@@ -202,4 +202,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Happy Extension Building! 🎉**
 
-If you find this tool helpful, please consider giving it a ⭐ on [GitHub](https://github.com/yourusername/create-chrome-ext)!
+If you find this tool helpful, please consider giving it a ⭐ on [GitHub](https://github.com/yourusername/create-react-chrome-ext)!
