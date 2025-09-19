@@ -56,6 +56,9 @@ cd my-awesome-extension
 # Choose your template (JavaScript or TypeScript)
 # The CLI will prompt you to select
 
+# Installation of the package
+npm install
+
 # Start development
 npm run dev
 
@@ -73,8 +76,6 @@ Starts the development server with watch mode and automatic extension reloading.
 ### `npm run build`
 Creates an optimized production build in the `dist` folder, ready for packaging and publishing to the Chrome Web Store.
 
-### `npm run preview`
-Serves the production build locally for testing before publishing.
 
 ## 📁 Project Structure
 
@@ -93,13 +94,15 @@ my-extension/
 │   │   └── background.js
 │   ├── content/
 │   │   └── content.js
-│   ├── popup/
-│   │   ├── Popup.jsx
-│   │   ├── Popup.css
-│   │   └── index.jsx
-│   └── utils/
-│       └── storage.js
+│   └── popup(react app)/
+│       ├── App.jsx
+│       ├── App.css
+│       └── index.jsx
+│   
 ├── package.json
+├── webpack.config.js
+├── webpack.dev.js
+├── webpack.prod.js
 ├── vite.config.js
 └── README.md
 ```
@@ -131,7 +134,7 @@ npm run dev
 
 - **Auto-reload**: The extension automatically reloads when you make changes
 - **Console debugging**: Use Chrome DevTools to debug different parts:
-  - **Popup**: Right-click extension icon → "Inspect popup"
+  - **Popup/react app**: Right-click extension icon → "Inspect popup"
   - **Background**: Go to `chrome://extensions/` → Click "background page"
   - **Content Script**: Use regular DevTools on any webpage
 
@@ -162,7 +165,7 @@ npm install <package-name>
 
 We welcome contributions! Please see our contributing guidelines:
 
-### Development Setup
+## Development Setup
 ```bash
 git clone https://github.com/yourusername/create-chrome-ext.git
 cd create-chrome-ext
