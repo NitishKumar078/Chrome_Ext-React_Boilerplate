@@ -1,0 +1,51 @@
+{
+  "name": "create-react-chrome-ext",
+  "version": "0.9.0",
+  "description": "Template for createing react chrome extension + webpack + typescript/javascript",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+<<<<<<< HEAD
+  "author": "Nitish",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.25.9",
+    "@types/chrome": "^0.0.280",
+    "babel-loader": "^9.2.1",
+    "copy-webpack-plugin": "^12.0.2",
+    "css-loader": "^7.1.2",
+    "css-minimizer-webpack-plugin": "^7.0.0",
+    "html-webpack-plugin": "^5.6.3",
+    "mini-css-extract-plugin": "^2.9.2",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-ext-reloader": "^1.1.13"
+=======
+  "bin": {
+    "create-chrome-ext": "./bin/index.js"
+>>>>>>> c83dd37c48b0b4fd70fa07e00513e042dc963c33
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NitishKumar078/create-react-chrome-ext.git"
+  },
+  "keywords": [],
+  "author": "Nitish kumar M",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/NitishKumar078/create-react-chrome-ext/issues"
+  },
+  "homepage": "https://github.com/NitishKumar078/create-react-chrome-ext#readme",
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "degit": "^2.8.4",
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "typescript": "^5.9.2"
+  }
+}
