@@ -12,24 +12,18 @@ This project provides a boilerplate setup for building a Chrome extension using 
 ### Prerequisites
 **Node.js**: Ensure you have Node.js installed to manage dependencies and run the project.
 ### Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/NitishKumar078/Chrome_Ext-React_Boilerplate.git
-   cd Chrome_Ext-React_Boilerplate
-   ```
-
-2. Install dependencies:
+1. Install dependencies:
 
    ```bash
    npm install
    ```
 ### Development
-1. Build the extension for the development:
+2. Build the extension for the development:
 
    ```bash
    npm run dev
    ```
-2. Load the extension in Chrome:
+3. Load the extension in Chrome:
   Open Chrome and go to chrome://extensions.
   Enable "Developer mode".
   Click "Load unpacked" and select the dist folder from this project.
@@ -38,7 +32,7 @@ This project provides a boilerplate setup for building a Chrome extension using 
 1. Build the extension:
 
    ```bash
-   npm run dev
+   npm run build
    ```
 The production-ready files and Development will be generated in the ./dist folder.
 

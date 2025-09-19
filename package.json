@@ -1,5 +1,5 @@
 {
-  "name": "chrome_ext-react_boilerplate",
+  "name": "create-react-chrome-ext",
   "version": "0.9.0",
   "description": "Template for createing react chrome extension + webpack + typescript/javascript",
   "scripts": {
