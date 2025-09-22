@@ -1,10 +1,7 @@
 {
   "name": "create-react-chrome-ext",
-  "version": "0.9.3",
+  "version": "0.9.5",
   "description": "Template for createing react chrome extension + webpack + typescript/javascript",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "bin": {
     "create-react-chrome-ext": "./bin/index.js"
   },
