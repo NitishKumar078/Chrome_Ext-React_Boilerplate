@@ -4,25 +4,28 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Downloads](https://img.shields.io/npm/dm/create-react-chrome-ext.svg)](https://www.npmjs.com/package/create-react-chrome-ext)
 
-> The fastest way to create a Chrome Extension project with React, TypeScript/JavaScript, and Vite
+> The fastest way to create a Chrome Extension project with React 19, TypeScript/JavaScript, and Webpack
 
-A CLI tool that scaffolds a modern Chrome Extension project using React and Vite, similar to how `create-react-app` works. Get up and running with a fully configured Chrome Extension development environment in seconds.
+A CLI tool that scaffolds a modern Chrome Extension project using React 19 and Webpack, similar to how `create-react-app` works. Get up and running with a fully configured Chrome Extension development environment in seconds.
 
 ## ✨ Features
 
-- 🚀 **Lightning Fast**: Powered by Vite for incredibly fast development builds
-- ⚛️ **React Ready**: Pre-configured React setup with modern JSX transform
+- 🚀 **Lightning Fast**: Powered by Webpack for optimized development builds
+- ⚛️ **React 19 Ready**: Pre-configured with the latest React 19 and modern JSX transform
 - 📝 **TypeScript Support**: Choose between JavaScript or TypeScript templates
 - 🔧 **Manifest V3**: Built with the latest Chrome Extension Manifest V3 specification
 - 🔄 **Auto Reload**: Development server with automatic extension reloading
-- 📦 **Production Ready**: Optimized build process for publishing
+- 📦 **Production Ready**: Optimized Webpack build process for publishing
 - 🎯 **Complete Structure**: Includes background script, content script, and popup components
+- 🎨 **Interactive Setup**: Guided CLI prompts for project configuration
 
 ## 🚀 Quick Start
 
 ```bash
-npx create-react-chrome-ext my-extension
-cd my-extension
+npx create-react-chrome-ext
+# Follow the interactive prompts
+cd your-project-name
+npm install
 npm run dev
 ```
 
@@ -30,37 +33,35 @@ npm run dev
 
 ### Using npx (recommended)
 ```bash
-npx create-react-chrome-ext <project-name>
+npx create-react-chrome-ext
 ```
 
 ### Using npm
 ```bash
 npm install -g create-react-chrome-ext
-create-react-chrome-ext <project-name>
+create-react-chrome-ext
 ```
 
 ### Using yarn
 ```bash
-yarn create chrome-ext <project-name>
+yarn create react-chrome-ext
 ```
 
-## 🎬 Example Workflow
+## 🎬 Interactive Setup Process
+
+When you run the command, you'll be guided through an interactive setup:
 
 ```bash
-# Create a new Chrome extension
-npx create-chrome-ext my-awesome-extension
+npx create-react-chrome-ext
 
-# Navigate to the project
-cd my-awesome-extension
-
-# Choose your template (JavaScript or TypeScript)
-# The CLI will prompt you to select
-
-# Start development
-npm run dev
-
-# Build for production
-npm run build
+🚀 Create Chrome Extension with React
+√ Project name: ... my-awesome-extension
+√ Choose language: » JavaScript
+✅ Project created successfully!
+👉 Next steps:
+  cd my-awesome-extension
+  npm install
+  npm run dev
 ```
 
 ## 📋 Available Scripts
@@ -68,13 +69,11 @@ npm run build
 Once your project is created, you can run the following commands:
 
 ### `npm run dev`
-Starts the development server with watch mode and automatic extension reloading. Perfect for active development.
+Starts the Webpack development server with watch mode and automatic extension reloading. Perfect for active development.
 
 ### `npm run build`
-Creates an optimized production build in the `dist` folder, ready for packaging and publishing to the Chrome Web Store.
+Creates an optimized production build using Webpack in the `dist` folder, ready for packaging and publishing to the Chrome Web Store.
 
-### `npm run preview`
-Serves the production build locally for testing before publishing.
 
 ## 📁 Project Structure
 
@@ -93,20 +92,21 @@ my-extension/
 │   │   └── background.js
 │   ├── content/
 │   │   └── content.js
-│   ├── popup/
-│   │   ├── Popup.jsx
-│   │   ├── Popup.css
-│   │   └── index.jsx
-│   └── utils/
-│       └── storage.js
+│   └── popup(react app)/
+│       ├── App.jsx
+│       ├── App.css
+│       └── index.jsx
+│   
 ├── package.json
-├── vite.config.js
+├── webpack.config.js
+├── webpack.dev.js
+├── webpack.prod.js
 └── README.md
 ```
 
 ### Key Components
 
-- **`src/popup/`**: React-based popup interface that appears when users click the extension icon
+- **`src/popup/`**: React 19-based popup interface that appears when users click the extension icon
 - **`src/background/`**: Service worker script that handles extension lifecycle and background tasks
 - **`src/content/`**: Content script that runs in the context of web pages
 - **`public/manifest.json`**: Chrome Extension manifest file (Manifest V3)
@@ -131,7 +131,7 @@ npm run dev
 
 - **Auto-reload**: The extension automatically reloads when you make changes
 - **Console debugging**: Use Chrome DevTools to debug different parts:
-  - **Popup**: Right-click extension icon → "Inspect popup"
+  - **Popup/react app**: Right-click extension icon → "Inspect popup"
   - **Background**: Go to `chrome://extensions/` → Click "background page"
   - **Content Script**: Use regular DevTools on any webpage
 
@@ -156,16 +156,16 @@ npm install <package-name>
 ### Styling
 - Use CSS modules, styled-components, or any CSS framework
 - Tailwind CSS can be easily integrated
-- CSS files are automatically processed by Vite
+- CSS files are automatically processed by Webpack
 
 ## 🤝 Contributing
 
 We welcome contributions! Please see our contributing guidelines:
 
-### Development Setup
+## Development Setup
 ```bash
-git clone https://github.com/yourusername/create-react-chrome-ext.git
-cd create-react-chrome-ext
+git clone https://github.com/yourusername/create-chrome-ext.git
+cd create-chrome-ext
 npm install
 npm link
 ```
@@ -173,7 +173,7 @@ npm link
 ### Testing Changes
 ```bash
 # Test the CLI locally
-create-react-chrome-ext test-extension
+create-react-chrome-ext
 ```
 
 ### Pull Request Process
@@ -195,8 +195,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🙏 Acknowledgments
 
 - Inspired by [create-react-app](https://github.com/facebook/create-react-app)
-- Built with [Vite](https://vitejs.dev/)
-- React team for the amazing library
+- Built with [Webpack](https://webpack.js.org/)
+- React team for the amazing React 19 library
 
 ---
 
