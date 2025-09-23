@@ -1,6 +1,6 @@
 {
   "name": "create-react-chrome-ext",
-  "version": "0.9.5",
+  "version": "1.0.0",
   "description": "Template for createing react chrome extension + webpack + typescript/javascript",
   "bin": {
     "create-react-chrome-ext": "./bin/index.js"
@@ -9,7 +9,10 @@
     "type": "git",
     "url": "git+https://github.com/NitishKumar078/create-react-chrome-ext.git"
   },
-  "keywords": [],
+  "keywords": [
+    "chrome extension, react, boilerplate",
+    "react extention"
+  ],
   "author": "Nitish kumar M",
   "license": "ISC",
   "type": "module",
