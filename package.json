@@ -1,6 +1,6 @@
 {
   "name": "create-react-chrome-ext",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Template for createing react chrome extension + webpack + typescript/javascript",
   "bin": {
     "create-react-chrome-ext": "./bin/index.js"
@@ -28,5 +28,6 @@
   "devDependencies": {
     "@types/node": "^24.5.2",
     "typescript": "^5.9.2"
-  }
+  },
+  "preferGlobal": false
 }
