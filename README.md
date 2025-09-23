@@ -19,8 +19,6 @@ A CLI tool that scaffolds a modern Chrome Extension project using React 19 and W
 - 🎯 **Complete Structure**: Includes background script, content script, and popup components
 - 🎨 **Interactive Setup**: Guided CLI prompts for project configuration
 
-Demo link - https://favicon-extractor.vercel.app/
-
 ## 🚀 Quick Start
 
 ```bash
